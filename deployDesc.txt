@@ -1,0 +1,197 @@
+$ truffle migrate --reset --network ethTestnet
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\BridgeBase.sol
+> Compiling .\contracts\BridgeBsc.sol
+> Compiling .\contracts\BridgeEth.sol
+> Compiling .\contracts\IToken.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\TokenBase.sol
+> Compiling .\contracts\TokenBase.sol
+> Compiling .\contracts\TokenBsc.sol
+> Compiling .\contracts\TokenEth.sol
+> Artifacts written to C:\Users\PC\Documents\code\eth-bsc-bridge\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.11+commit.d7f03943.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'ethTestnet'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x7bd50db9e44cd73be73077ccd7b9bfe1c6e8fbcbac94a2c16e7679de45906b87
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x2c7623bD60110f808d5503307E5702Cf81358612
+   > block number:        11871102
+   > block timestamp:     1643105835
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             2.448073755614688832
+   > gas used:            250142 (0x3d11e)
+   > gas price:           35.941758086 gwei
+   > value sent:          0 ETH
+   > total cost:          0.008990543251148212 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.008990543251148212 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'TokenEth'
+   --------------------
+   > transaction hash:    0x73c45739b3253c866547d0209da1cb632abfb08b1712eda7647466332b938750
+   > Blocks: 2            Seconds: 29
+   > contract address:    0xcA9A527e6f94a041D425f07F0aF6df9BC5E8Bb30
+   > block number:        11871106
+   > block timestamp:     1643105891
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             2.388321385648339084
+   > gas used:            1774358 (0x1b1316)
+   > gas price:           32.83413562 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05825951121043196 ETH
+
+
+   Replacing 'BridgeEth'
+   ---------------------
+   > transaction hash:    0xddc148968b8dea8f9f9bda864c712edcc127476f153cdcdced41c8a5190610aa
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xA1b0cAFD8e2E0b9CfE61f3aAA8D57D9b55054e1d
+   > block number:        11871110
+   > block timestamp:     1643105974
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             2.36753205940220776
+   > gas used:            612171 (0x9574b)
+   > gas price:           30.6341052 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0187533108143892 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.07701282202482116 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.086003365275969372 ETH
+
+
+
+PC@DESKTOP-6IJMC6R MINGW64 ~/Documents/code/eth-bsc-bridge (main)
+$ truffle migrate --reset --network bscTestnet
+
+Compiling your contracts...
+===========================
+> Compiling @openzeppelin\contracts\token\ERC20\ERC20.sol
+> Compiling @openzeppelin\contracts\token\ERC20\IERC20.sol
+> Compiling @openzeppelin\contracts\token\ERC20\extensions\IERC20Metadata.sol
+> Compiling @openzeppelin\contracts\utils\Context.sol
+> Compiling .\contracts\BridgeBase.sol
+> Compiling .\contracts\BridgeBsc.sol
+> Compiling .\contracts\BridgeEth.sol
+> Compiling .\contracts\IToken.sol
+> Compiling .\contracts\Itoken.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\TokenBase.sol
+> Compiling .\contracts\TokenBsc.sol
+> Compiling .\contracts\TokenEth.sol
+> Artifacts written to C:\Users\PC\Documents\code\eth-bsc-bridge\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.11+commit.d7f03943.Emscripten.clang
+
+
+> Duplicate contract names found for IToken.
+> This can cause errors and unknown behavior. Please rename one of your contracts.
+
+
+Starting migrations...
+======================
+> Network name:    'bscTestnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xf924e7dc3b75aa9323916a24b600a976dddb011e5b5b8af6da00d07273156b2b
+   > Blocks: 6            Seconds: 20
+   > contract address:    0xFdC2465eAdec3A3f08dce606f7E02A7e983eE26e
+   > block number:        16170125
+   > block timestamp:     1643106072
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             0.88969488
+   > gas used:            248842 (0x3cc0a)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00248842 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00248842 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'TokenBsc'
+   --------------------
+   > transaction hash:    0xe5780dc5d26d1f8dbe5adb6fc74cd02f402425127bdc114186d8a603d222daf7
+   > Blocks: 3            Seconds: 11
+   > contract address:    0xBd2f03fB639710dea281C02BC2bffbcea49D5561
+   > block number:        16170140
+   > block timestamp:     1643106117
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             0.87157817
+   > gas used:            1769158 (0x1afec6)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01769158 ETH
+
+
+   Replacing 'BridgeBsc'
+   ---------------------
+   > transaction hash:    0xb808faaeb757f9abe28ff0c54b47562f6e4e113b5e2c2a36b3c4ba102532f1ab
+   > Blocks: 5            Seconds: 16
+   > contract address:    0xeC8ec638c2b82a5b0aa1ed9CFDC313a327a4782b
+   > block number:        16170148
+   > block timestamp:     1643106141
+   > account:             0xfF8A240D16412f6A4cbf27Fb10629a24b97d4873
+   > balance:             0.86548246
+   > gas used:            609571 (0x94d23)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00609571 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.02378729 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.02627571 ETH

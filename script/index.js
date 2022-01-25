@@ -33,35 +33,44 @@ const init = async () => {
         console.log('date : ', date)
         console.log('nonce : ', nonce)
 
-        console.log('event.returnValues : ', event)
-
-        const tx = bridgeBsc.methods.mint(to, amount, nonce);
-
-        const [gasPrice, gasCost] = await Promise.all([
-            web3Bsc.eth.getGasPrice(),
-            tx.estimateGas({from: admin}),
-          ]);
-
-        const data = tx.encodeABI();
-        console.log('data tx.encodeABI() : ', data)
-        const txData = {
-            from: admin,
-            to: bridgeBsc.options.address,
-            data,
-            gas: gasCost,
-            gasPrice
-          };
+        // console.log('event.returnValues : ', event)
 
 
-          const receipt = await web3Bsc.eth.sendTransaction(txData);
-          console.log(`Transaction hash: ${receipt.transactionHash}`);
-          console.log(`
-            Processed transfer:
-            - from ${from} 
-            - to ${to} 
-            - amount ${amount} tokens
-            - date ${date}
-          `);
+        // console.log('tx', tx)
+
+        try {
+            const tx = await bridgeBsc.methods.mint(to, amount, nonce);
+            
+            const [gasPrice, gasCost] = await Promise.all([
+                web3Bsc.eth.getGasPrice(),
+                tx.estimateGas({from: admin}),
+                ]);
+    
+            const data = tx.encodeABI();
+            console.log('data tx.encodeABI() : ', data)
+            const txData = {
+                from: admin,
+                to: bridgeBsc.options.address,
+                data,
+                gas: gasCost,
+                gasPrice
+              };
+    
+    
+              const receipt = await web3Bsc.eth.sendTransaction(txData);
+              console.log(`Transaction hash: ${receipt.transactionHash}`);
+              console.log(`
+                Processed transfer:
+                - from ${from} 
+                - to ${to} 
+                - amount ${amount} tokens
+                - date ${date}
+              `);
+
+        } catch (error) {
+            console.log('error : ', error)
+        }
+
     }).on('error', console.error);
 }
 
