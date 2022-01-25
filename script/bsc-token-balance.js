@@ -5,7 +5,6 @@ module.exports = async done => {
   const tokenBsc = await TokenBsc.deployed();
   const balance = await tokenBsc.balanceOf(recipient);
   console.log('recipient : ', recipient)
-  console.log(' web3.eth.getAccounts() : ',  await web3.eth.getAccounts())
   console.log(balance.toString());
   done();
 }
