@@ -33,11 +33,6 @@ const init = async () => {
         console.log('date : ', date)
         console.log('nonce : ', nonce)
 
-        // console.log('event.returnValues : ', event)
-
-
-        // console.log('tx', tx)
-
         try {
             const tx = await bridgeBsc.methods.mint(to, amount, nonce);
             
